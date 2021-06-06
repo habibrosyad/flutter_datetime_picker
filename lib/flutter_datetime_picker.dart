@@ -309,6 +309,9 @@ class _DatePickerState extends State<_DatePickerComponent> {
               child: GestureDetector(
                 child: Material(
                   color: theme.backgroundColor,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(theme.borderRadius),
+                      topRight: Radius.circular(theme.borderRadius)),
                   child: _renderPickerView(theme),
                 ),
               ),
@@ -475,6 +478,9 @@ class _DatePickerState extends State<_DatePickerComponent> {
       height: theme.titleHeight,
       decoration: BoxDecoration(
         color: theme.headerColor ?? theme.backgroundColor,
+        borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(theme.borderRadius),
+            topRight: Radius.circular(theme.borderRadius)),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
